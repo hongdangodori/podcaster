@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var playerWindow: PlayerWindow?
-    var podcastPlayerViewController: PodcastPlayerViewController = PodcastPlayerViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -46,28 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func addPlayerViewController() {
         guard let tabBarController = window?.rootViewController as? UITabBarController else { return }
         var playerViewHeight: CGFloat = UIScreen.main.bounds.height
-        
-//        podcastPlayerViewController.willPopClosure = { _ in
-//            guard let playerWindow = self.playerWindow else { return }
-//            playerWindow.frame = CGRect(x: playerWindow.frame.origin.x, y: playerWindow.frame.origin.y, width: playerWindow.frame.width, height: playerViewHeight)
-//        }
-//        
-//        podcastPlayerViewController.didPopClosure = {
-//            tabBarController.tabBar.isHidden = $0
-//            guard let playerWindow = self.playerWindow else { return }
-//            playerWindow.frame = CGRect(x: playerWindow.frame.origin.x, y: playerWindow.frame.origin.y, width: playerWindow.frame.width, height: playerViewHeight + ($0 ? tabBarController.tabBar.frame.height : 0))
-//        }
-//        
-//        if #available(iOS 11, *) {
-//            guard let topPadding = window?.safeAreaInsets.top, let bottomPadding = window?.safeAreaInsets.bottom else { return }
-//            podcastPlayerViewController.topInsets = topPadding
-//            if podcastPlayerViewController.topInsets <= 0 {
-//                podcastPlayerViewController.topInsets = UIApplication.shared.statusBarFrame.height
-//            }
-//            
-//            print(podcastPlayerViewController.topInsets)
-//            playerViewHeight = playerViewHeight - bottomPadding
-//        }
+
         
         playerWindow = PlayerWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         let container = PodcastContainerViewController()
