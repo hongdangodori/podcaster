@@ -12,11 +12,11 @@
 		8F2D71CF1FE3936500BF81EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71CE1FE3936500BF81EE /* Assets.xcassets */; };
 		8F2D71D21FE3936500BF81EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71D01FE3936500BF81EE /* LaunchScreen.storyboard */; };
 		8F2D71DD1FE3936600BF81EE /* PodcasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D71DC1FE3936600BF81EE /* PodcasterTests.swift */; };
-		8F2D71EC1FE399D600BF81EE /* PopupTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71EA1FE399D600BF81EE /* PopupTableView.xib */; };
+		8F2D71EC1FE399D600BF81EE /* PopupSlideTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71EA1FE399D600BF81EE /* PopupSlideTableView.xib */; };
 		8F4BFFD41FE5813000CDC499 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */; };
 		8F4BFFD61FE5813C00CDC499 /* NowPlayingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD51FE5813C00CDC499 /* NowPlayingView.xib */; };
 		8F5BC2761FE3A691008F936C /* PlayerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BC2751FE3A691008F936C /* PlayerWindow.swift */; };
-		8F5BC2801FE546ED008F936C /* PopupTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BC27F1FE546ED008F936C /* PopupTableView.swift */; };
+		8F5BC2801FE546ED008F936C /* PopupSlideTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BC27F1FE546ED008F936C /* PopupSlideTableView.swift */; };
 		8F5BC2821FE548F1008F936C /* PodcastContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BC2811FE548F1008F936C /* PodcastContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,11 +40,11 @@
 		8F2D71D81FE3936600BF81EE /* PodcasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodcasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2D71DC1FE3936600BF81EE /* PodcasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcasterTests.swift; sourceTree = "<group>"; };
 		8F2D71DE1FE3936600BF81EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F2D71EA1FE399D600BF81EE /* PopupTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupTableView.xib; sourceTree = "<group>"; };
+		8F2D71EA1FE399D600BF81EE /* PopupSlideTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupSlideTableView.xib; sourceTree = "<group>"; };
 		8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
 		8F4BFFD51FE5813C00CDC499 /* NowPlayingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingView.xib; sourceTree = "<group>"; };
 		8F5BC2751FE3A691008F936C /* PlayerWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWindow.swift; sourceTree = "<group>"; };
-		8F5BC27F1FE546ED008F936C /* PopupTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTableView.swift; sourceTree = "<group>"; };
+		8F5BC27F1FE546ED008F936C /* PopupSlideTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupSlideTableView.swift; sourceTree = "<group>"; };
 		8F5BC2811FE548F1008F936C /* PodcastContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,8 +117,8 @@
 		8F2D71E81FE399AA00BF81EE /* view */ = {
 			isa = PBXGroup;
 			children = (
-				8F2D71EA1FE399D600BF81EE /* PopupTableView.xib */,
-				8F5BC27F1FE546ED008F936C /* PopupTableView.swift */,
+				8F2D71EA1FE399D600BF81EE /* PopupSlideTableView.xib */,
+				8F5BC27F1FE546ED008F936C /* PopupSlideTableView.swift */,
 				8F5BC2751FE3A691008F936C /* PlayerWindow.swift */,
 				8F5BC2811FE548F1008F936C /* PodcastContainerViewController.swift */,
 				8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */,
@@ -212,7 +212,7 @@
 			files = (
 				8F2D71D21FE3936500BF81EE /* LaunchScreen.storyboard in Resources */,
 				8F2D71CF1FE3936500BF81EE /* Assets.xcassets in Resources */,
-				8F2D71EC1FE399D600BF81EE /* PopupTableView.xib in Resources */,
+				8F2D71EC1FE399D600BF81EE /* PopupSlideTableView.xib in Resources */,
 				8F4BFFD61FE5813C00CDC499 /* NowPlayingView.xib in Resources */,
 				8F2D71CD1FE3936500BF81EE /* Main.storyboard in Resources */,
 			);
@@ -232,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F5BC2801FE546ED008F936C /* PopupTableView.swift in Sources */,
+				8F5BC2801FE546ED008F936C /* PopupSlideTableView.swift in Sources */,
 				8F2D71C61FE3936500BF81EE /* AppDelegate.swift in Sources */,
 				8F4BFFD41FE5813000CDC499 /* NowPlayingView.swift in Sources */,
 				8F5BC2761FE3A691008F936C /* PlayerWindow.swift in Sources */,

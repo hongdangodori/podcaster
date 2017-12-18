@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupTableView" customModule="Podcaster" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupSlideTableView" customModule="Podcaster" customModuleProvider="target">
             <connections>
                 <outlet property="deemedView" destination="JoY-10-1m0" id="QiT-qL-4t9"/>
                 <outlet property="headerView" destination="TbM-cC-cQp" id="a11-mt-Ah5"/>
@@ -42,23 +42,9 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbM-cC-cQp" userLabel="Header View">
                             <rect key="frame" x="0.0" y="50" width="375" height="44"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo0-uM-rcc">
-                                    <rect key="frame" x="8" y="11" width="16" height="22"/>
-                                    <state key="normal" image="downArrow"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8j8-Gn-DjX">
-                                    <rect key="frame" x="336" y="7" width="31" height="30"/>
-                                    <state key="normal" title="x 1.0"/>
-                                </button>
-                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="xo0-uM-rcc" firstAttribute="centerY" secondItem="TbM-cC-cQp" secondAttribute="centerY" id="KFw-0b-KJF"/>
                                 <constraint firstAttribute="height" constant="44" id="atS-Ol-XQ0"/>
-                                <constraint firstItem="8j8-Gn-DjX" firstAttribute="centerY" secondItem="TbM-cC-cQp" secondAttribute="centerY" id="jmd-DS-PLL"/>
-                                <constraint firstAttribute="trailing" secondItem="8j8-Gn-DjX" secondAttribute="trailing" constant="8" id="xzf-rj-53t"/>
-                                <constraint firstItem="xo0-uM-rcc" firstAttribute="leading" secondItem="TbM-cC-cQp" secondAttribute="leading" constant="8" id="zjU-up-HJh"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -94,7 +80,4 @@
             <point key="canvasLocation" x="-507" y="176"/>
         </view>
     </objects>
-    <resources>
-        <image name="downArrow" width="16" height="16"/>
-    </resources>
 </document>
