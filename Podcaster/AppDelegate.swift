@@ -43,15 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func addPlayerViewController() {
-        guard let tabBarController = window?.rootViewController as? UITabBarController else { return }
-        var playerViewHeight: CGFloat = UIScreen.main.bounds.height
-
-        
-        playerWindow = PlayerWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        let container = PodcastContainerViewController()
-        playerWindow?.rootViewController = container
-        playerWindow?.touchesDelegate = container
-        playerWindow?.isHidden = false
+//        playerWindow = PlayerWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+//        let container = PodcastContainerViewController()
+//        
+//        playerWindow?.rootViewController = container
+//        playerWindow?.touchesDelegate = container
+//        playerWindow?.isHidden = false
     }
 }
 

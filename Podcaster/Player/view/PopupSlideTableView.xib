@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,13 +25,35 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEA-wg-nER" userLabel="Container View">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IrB-vH-84n">
-                            <rect key="frame" x="0.0" y="50" width="375" height="597"/>
-                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="separatorColor" red="0.55679994820000001" green="0.55689889189999997" blue="0.55679368969999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEz-rC-Odx" userLabel="Contents View">
+                            <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IrB-vH-84n">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="separatorColor" red="0.55679994820000001" green="0.55689889189999997" blue="0.55679368969999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbM-cC-cQp" userLabel="Header View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="atS-Ol-XQ0"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.5096537812081503" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="TbM-cC-cQp" firstAttribute="top" secondItem="GEz-rC-Odx" secondAttribute="top" id="Gdt-rE-3UY"/>
+                                <constraint firstAttribute="trailing" secondItem="IrB-vH-84n" secondAttribute="trailing" id="RcV-Kj-75w"/>
+                                <constraint firstAttribute="bottom" secondItem="IrB-vH-84n" secondAttribute="bottom" id="VLn-0C-mEA"/>
+                                <constraint firstItem="TbM-cC-cQp" firstAttribute="leading" secondItem="GEz-rC-Odx" secondAttribute="leading" id="Z4d-m6-M2j"/>
+                                <constraint firstItem="IrB-vH-84n" firstAttribute="leading" secondItem="GEz-rC-Odx" secondAttribute="leading" id="i0u-4f-mz6"/>
+                                <constraint firstAttribute="trailing" secondItem="TbM-cC-cQp" secondAttribute="trailing" id="yyF-Jh-Wm3"/>
+                                <constraint firstItem="IrB-vH-84n" firstAttribute="top" secondItem="GEz-rC-Odx" secondAttribute="top" id="zMc-sU-doo"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76h-y5-vHU">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,43 +61,31 @@
                                 <constraint firstAttribute="height" constant="50" id="btL-sg-FwL"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbM-cC-cQp" userLabel="Header View">
-                            <rect key="frame" x="0.0" y="50" width="375" height="44"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="44" id="atS-Ol-XQ0"/>
-                            </constraints>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="IrB-vH-84n" firstAttribute="top" secondItem="76h-y5-vHU" secondAttribute="bottom" id="05S-Xe-8xe"/>
-                        <constraint firstItem="IrB-vH-84n" firstAttribute="leading" secondItem="LEA-wg-nER" secondAttribute="leading" id="12v-UV-w94"/>
-                        <constraint firstAttribute="trailing" secondItem="TbM-cC-cQp" secondAttribute="trailing" id="557-Fe-IWA"/>
                         <constraint firstItem="76h-y5-vHU" firstAttribute="top" secondItem="LEA-wg-nER" secondAttribute="top" id="7dx-jx-HAG"/>
-                        <constraint firstItem="TbM-cC-cQp" firstAttribute="top" secondItem="76h-y5-vHU" secondAttribute="bottom" id="8o8-tF-NIh"/>
-                        <constraint firstItem="TbM-cC-cQp" firstAttribute="leading" secondItem="LEA-wg-nER" secondAttribute="leading" id="HVf-M1-8sw"/>
+                        <constraint firstItem="GEz-rC-Odx" firstAttribute="top" secondItem="76h-y5-vHU" secondAttribute="bottom" id="99R-zo-dPh"/>
+                        <constraint firstItem="GEz-rC-Odx" firstAttribute="leading" secondItem="LEA-wg-nER" secondAttribute="leading" id="F01-qA-gvk"/>
                         <constraint firstItem="76h-y5-vHU" firstAttribute="leading" secondItem="LEA-wg-nER" secondAttribute="leading" id="L0O-RC-UUb"/>
-                        <constraint firstAttribute="trailing" secondItem="IrB-vH-84n" secondAttribute="trailing" id="Mif-4s-Cuy"/>
                         <constraint firstAttribute="trailing" secondItem="76h-y5-vHU" secondAttribute="trailing" id="QlF-Ol-L0c"/>
-                        <constraint firstAttribute="bottom" secondItem="IrB-vH-84n" secondAttribute="bottom" id="olU-px-cWG"/>
+                        <constraint firstAttribute="bottom" secondItem="GEz-rC-Odx" secondAttribute="bottom" id="b3Z-AQ-omq"/>
+                        <constraint firstAttribute="trailing" secondItem="GEz-rC-Odx" secondAttribute="trailing" id="siq-dF-dpI"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="dWR-uM-RTY" firstAttribute="bottom" secondItem="LEA-wg-nER" secondAttribute="bottom" id="X0Y-bN-gcV"/>
-                <constraint firstItem="dWR-uM-RTY" firstAttribute="leading" secondItem="LEA-wg-nER" secondAttribute="leading" id="hpZ-Cz-gUK"/>
-                <constraint firstItem="dWR-uM-RTY" firstAttribute="top" secondItem="LEA-wg-nER" secondAttribute="top" id="stk-Gq-eNe"/>
-                <constraint firstItem="dWR-uM-RTY" firstAttribute="trailing" secondItem="LEA-wg-nER" secondAttribute="trailing" id="xsB-xC-BJg"/>
+                <constraint firstAttribute="bottom" secondItem="LEA-wg-nER" secondAttribute="bottom" id="X0Y-bN-gcV"/>
+                <constraint firstAttribute="leading" secondItem="LEA-wg-nER" secondAttribute="leading" id="hpZ-Cz-gUK"/>
+                <constraint firstAttribute="top" secondItem="LEA-wg-nER" secondAttribute="top" id="stk-Gq-eNe"/>
+                <constraint firstAttribute="trailing" secondItem="LEA-wg-nER" secondAttribute="trailing" id="xsB-xC-BJg"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="dWR-uM-RTY"/>
             <point key="canvasLocation" x="51.5" y="-49.5"/>
         </view>
         <view alpha="0.69999999999999996" contentMode="scaleToFill" id="JoY-10-1m0" userLabel="Deemed View">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-            <viewLayoutGuide key="safeArea" id="qbF-k8-l5z"/>
             <point key="canvasLocation" x="-507" y="176"/>
         </view>
     </objects>
