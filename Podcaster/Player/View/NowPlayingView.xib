@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NowPlayingView" customModule="Podcaster" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="zL4-pR-h3N"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhT-Vz-dDn" userLabel="Media Button">
+                    <rect key="frame" x="255" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="FhT-Vz-dDn" secondAttribute="height" multiplier="1:1" id="PCk-Jx-Dlb"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <state key="normal" image="playIcon"/>
+                    <state key="highlighted" image="playIconDark" backgroundImage="ic_channeldetail_subscribed_bg.9"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URZ-kb-w0P" userLabel="Close Button">
+                    <rect key="frame" x="313" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="URZ-kb-w0P" secondAttribute="height" multiplier="1:1" id="xMS-C6-D8d"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                    <state key="normal" image="close"/>
+                    <state key="highlighted" image="close_white" backgroundImage="ic_channeldetail_subscribed_bg.9"/>
+                    <connections>
+                        <action selector="didCloseButtonTouched:" destination="-1" eventType="touchUpInside" id="QUj-DN-QKR"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="WcB-Vp-iCG" userLabel="Pod Image View">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="WcB-Vp-iCG" secondAttribute="height" multiplier="1:1" id="QEH-Kd-hR2"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test pod" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRj-L1-tsB" userLabel="Pod Title Label">
+                    <rect key="frame" x="58" y="5.5" width="196" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="WcB-Vp-iCG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2tm-8W-e0f"/>
+                <constraint firstItem="RRj-L1-tsB" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-10" id="3Bu-8W-Df9"/>
+                <constraint firstItem="FhT-Vz-dDn" firstAttribute="leading" secondItem="RRj-L1-tsB" secondAttribute="trailing" constant="1" id="8An-J0-v9L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="URZ-kb-w0P" secondAttribute="trailing" constant="12" id="DG4-Oj-7in"/>
+                <constraint firstItem="URZ-kb-w0P" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PvG-gL-4RE"/>
+                <constraint firstItem="WcB-Vp-iCG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Xq3-mH-gvb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="URZ-kb-w0P" secondAttribute="bottom" id="bLw-m7-9Vl"/>
+                <constraint firstItem="FhT-Vz-dDn" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="eV8-sx-9u0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WcB-Vp-iCG" secondAttribute="bottom" id="fXH-G0-T6P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="FhT-Vz-dDn" secondAttribute="top" id="hSm-t7-4Ps"/>
+                <constraint firstItem="RRj-L1-tsB" firstAttribute="leading" secondItem="WcB-Vp-iCG" secondAttribute="trailing" constant="8" id="hVW-Gx-XT8"/>
+                <constraint firstItem="URZ-kb-w0P" firstAttribute="leading" secondItem="FhT-Vz-dDn" secondAttribute="trailing" constant="8" id="ulu-po-Mxh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-322.5" y="38"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="32" height="32"/>
+        <image name="close_white" width="32" height="32"/>
+        <image name="ic_channeldetail_subscribed_bg.9" width="49" height="38"/>
+        <image name="picture" width="64" height="64"/>
+        <image name="playIcon" width="72" height="72"/>
+        <image name="playIconDark" width="72" height="72"/>
+    </resources>
+</document>

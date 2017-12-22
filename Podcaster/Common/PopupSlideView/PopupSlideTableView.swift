@@ -11,7 +11,7 @@ import UIKit
 class PopupSlideTableView: UIView {
     public let minimumVelocityToHide: CGFloat = 1500
     public let minimumScreenRatioToHide: CGFloat = 0.2
-    public let animationDuration: TimeInterval = 0.4
+    public let animationDuration: TimeInterval = 0.3
     
     @IBOutlet weak var deemedView: UIView!
     
@@ -71,6 +71,24 @@ class PopupSlideTableView: UIView {
     @IBOutlet private weak var miniSummaryBarView: UIView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var headerView: UIView!
+    
+    public weak var summaryBarView: UIView? = nil {
+        willSet {
+            if let summaryBarView = summaryBarView {
+                miniSummaryBarView.removeConstraints(miniSummaryBarView.constraints.filter { $0.firstItem === summaryBarView || $0.secondItem === summaryBarView })
+            }
+            guard let newValue = newValue else { return }
+            miniSummaryBarView.addSubview(newValue)
+        }
+        
+        didSet {
+            guard let summaryBarView = summaryBarView else { return }
+            miniSummaryBarView.addConstraint(NSLayoutConstraint(item: miniSummaryBarView, attribute: .leading, relatedBy: .equal, toItem: summaryBarView, attribute: .leading, multiplier: 1.0, constant: 0.0))
+            miniSummaryBarView.addConstraint(NSLayoutConstraint(item: miniSummaryBarView, attribute: .trailing, relatedBy: .equal, toItem: summaryBarView, attribute: .trailing, multiplier: 1.0, constant: 0.0))
+            miniSummaryBarView.addConstraint(NSLayoutConstraint(item: miniSummaryBarView, attribute: .top, relatedBy: .equal, toItem: summaryBarView, attribute: .top, multiplier: 1.0, constant: 0.0))
+            miniSummaryBarView.addConstraint(NSLayoutConstraint(item: miniSummaryBarView, attribute: .bottom, relatedBy: .equal, toItem: summaryBarView, attribute: .bottom, multiplier: 1.0, constant: 0.0))
+        }
+    }
     
     init(miniPlayerHeight: CGFloat) {
         miniSummaryBarHeight = miniPlayerHeight
@@ -328,7 +346,7 @@ extension PopupSlideTableView: UITableViewDataSource {
 extension PopupSlideTableView: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollOffset = scrollView.contentOffset.y
-        print(scrollOffset)
+        
         if scrollOffset < 0 || isPanning {
             scrollView.contentOffset.y = 0
             onPan(scrollView.panGestureRecognizer)
