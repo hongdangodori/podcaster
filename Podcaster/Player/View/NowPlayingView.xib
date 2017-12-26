@@ -26,7 +26,7 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="FhT-Vz-dDn" secondAttribute="height" multiplier="1:1" id="PCk-Jx-Dlb"/>
                     </constraints>
-                    <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
                     <state key="normal" image="playIcon"/>
                     <state key="highlighted" image="playIconDark" backgroundImage="ic_channeldetail_subscribed_bg.9"/>
                 </button>
@@ -35,14 +35,14 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="URZ-kb-w0P" secondAttribute="height" multiplier="1:1" id="xMS-C6-D8d"/>
                     </constraints>
-                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                     <state key="normal" image="close"/>
                     <state key="highlighted" image="close_white" backgroundImage="ic_channeldetail_subscribed_bg.9"/>
                     <connections>
                         <action selector="didCloseButtonTouched:" destination="-1" eventType="touchUpInside" id="QUj-DN-QKR"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="WcB-Vp-iCG" userLabel="Pod Image View">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bear_IU" translatesAutoresizingMaskIntoConstraints="NO" id="WcB-Vp-iCG" userLabel="Pod Image View">
                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="WcB-Vp-iCG" secondAttribute="height" multiplier="1:1" id="QEH-Kd-hR2"/>
@@ -76,10 +76,10 @@
         </view>
     </objects>
     <resources>
+        <image name="Bear_IU" width="307" height="309"/>
         <image name="close" width="32" height="32"/>
         <image name="close_white" width="32" height="32"/>
         <image name="ic_channeldetail_subscribed_bg.9" width="49" height="38"/>
-        <image name="picture" width="64" height="64"/>
         <image name="playIcon" width="72" height="72"/>
         <image name="playIconDark" width="72" height="72"/>
     </resources>

@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC635701FF279780072D7FC /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC6356F1FF279780072D7FC /* HomeTableViewController.swift */; };
+		0FC635721FF27B8E0072D7FC /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC635711FF27B8E0072D7FC /* CategoryTableViewCell.swift */; };
+		0FC635741FF27E1D0072D7FC /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC635731FF27E1D0072D7FC /* CategoryCollectionViewCell.swift */; };
+		0FC635761FF288BC0072D7FC /* CategoryTableTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC635751FF288BC0072D7FC /* CategoryTableTypeTableViewCell.swift */; };
 		8F2D71C61FE3936500BF81EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D71C51FE3936500BF81EE /* AppDelegate.swift */; };
 		8F2D71CD1FE3936500BF81EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71CB1FE3936500BF81EE /* Main.storyboard */; };
 		8F2D71CF1FE3936500BF81EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71CE1FE3936500BF81EE /* Assets.xcassets */; };
 		8F2D71D21FE3936500BF81EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71D01FE3936500BF81EE /* LaunchScreen.storyboard */; };
 		8F2D71DD1FE3936600BF81EE /* PodcasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D71DC1FE3936600BF81EE /* PodcasterTests.swift */; };
 		8F2D71EC1FE399D600BF81EE /* PopupSlideTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71EA1FE399D600BF81EE /* PopupSlideTableView.xib */; };
-		8F4B00261FECFB7500CDC499 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B00251FECFB7500CDC499 /* HomeViewController.swift */; };
 		8F4BFFD41FE5813000CDC499 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */; };
 		8F4BFFD61FE5813C00CDC499 /* NowPlayingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD51FE5813C00CDC499 /* NowPlayingView.xib */; };
 		8F4BFFDA1FE7A1D300CDC499 /* CustomTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD91FE7A1D300CDC499 /* CustomTabbarViewController.swift */; };
@@ -31,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FC6356F1FF279780072D7FC /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		0FC635711FF27B8E0072D7FC /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		0FC635731FF27E1D0072D7FC /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		0FC635751FF288BC0072D7FC /* CategoryTableTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableTypeTableViewCell.swift; sourceTree = "<group>"; };
 		8F2D71C21FE3936500BF81EE /* Podcaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podcaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2D71C51FE3936500BF81EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F2D71CC1FE3936500BF81EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,7 +48,6 @@
 		8F2D71DC1FE3936600BF81EE /* PodcasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcasterTests.swift; sourceTree = "<group>"; };
 		8F2D71DE1FE3936600BF81EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F2D71EA1FE399D600BF81EE /* PopupSlideTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupSlideTableView.xib; sourceTree = "<group>"; };
-		8F4B00251FECFB7500CDC499 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
 		8F4BFFD51FE5813C00CDC499 /* NowPlayingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingView.xib; sourceTree = "<group>"; };
 		8F4BFFD91FE7A1D300CDC499 /* CustomTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +159,10 @@
 		8F4B00271FECFB7800CDC499 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8F4B00251FECFB7500CDC499 /* HomeViewController.swift */,
+				0FC6356F1FF279780072D7FC /* HomeTableViewController.swift */,
+				0FC635711FF27B8E0072D7FC /* CategoryTableViewCell.swift */,
+				0FC635731FF27E1D0072D7FC /* CategoryCollectionViewCell.swift */,
+				0FC635751FF288BC0072D7FC /* CategoryTableTypeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,11 +291,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F4B00261FECFB7500CDC499 /* HomeViewController.swift in Sources */,
 				8F4BFFDA1FE7A1D300CDC499 /* CustomTabbarViewController.swift in Sources */,
 				8F5BC2801FE546ED008F936C /* PopupSlideTableView.swift in Sources */,
+				0FC635761FF288BC0072D7FC /* CategoryTableTypeTableViewCell.swift in Sources */,
 				8F2D71C61FE3936500BF81EE /* AppDelegate.swift in Sources */,
 				8F4BFFD41FE5813000CDC499 /* NowPlayingView.swift in Sources */,
+				0FC635701FF279780072D7FC /* HomeTableViewController.swift in Sources */,
+				0FC635741FF27E1D0072D7FC /* CategoryCollectionViewCell.swift in Sources */,
+				0FC635721FF27B8E0072D7FC /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,11 +452,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3CWSZ25X7D;
+				DEVELOPMENT_TEAM = C43G5V2XJM;
 				INFOPLIST_FILE = Podcaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bh.jshn.Podcaster;
+				PRODUCT_BUNDLE_IDENTIFIER = bh.stepproject.Podcaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -456,11 +468,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3CWSZ25X7D;
+				DEVELOPMENT_TEAM = C43G5V2XJM;
 				INFOPLIST_FILE = Podcaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bh.jshn.Podcaster;
+				PRODUCT_BUNDLE_IDENTIFIER = bh.stepproject.Podcaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
