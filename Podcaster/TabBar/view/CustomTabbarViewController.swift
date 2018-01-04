@@ -67,7 +67,6 @@ class CustomTabbarViewController: UITabBarController {
     @objc func popupPlayerInfoView(_ sender: Any) {
         playInfoView.popUpPlayerView(animated: true)
         podcastPlayerView.isHidden =  false
-        guard let notification = sender as? Notification else { return }
-        print(notification.userInfo)
+//        guard let notification = sender as? Notification else { return }
     }
 }

@@ -17,6 +17,7 @@
 		8F2D71D21FE3936500BF81EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71D01FE3936500BF81EE /* LaunchScreen.storyboard */; };
 		8F2D71DD1FE3936600BF81EE /* PodcasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D71DC1FE3936600BF81EE /* PodcasterTests.swift */; };
 		8F2D71EC1FE399D600BF81EE /* PopupSlideTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71EA1FE399D600BF81EE /* PopupSlideTableView.xib */; };
+		8F306C331FFDEAEE00DBA6AD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F306C321FFDEAEE00DBA6AD /* SearchViewController.swift */; };
 		8F4BFFD41FE5813000CDC499 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */; };
 		8F4BFFD61FE5813C00CDC499 /* NowPlayingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD51FE5813C00CDC499 /* NowPlayingView.xib */; };
 		8F4BFFDA1FE7A1D300CDC499 /* CustomTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD91FE7A1D300CDC499 /* CustomTabbarViewController.swift */; };
@@ -48,6 +49,7 @@
 		8F2D71DC1FE3936600BF81EE /* PodcasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcasterTests.swift; sourceTree = "<group>"; };
 		8F2D71DE1FE3936600BF81EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F2D71EA1FE399D600BF81EE /* PopupSlideTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupSlideTableView.xib; sourceTree = "<group>"; };
+		8F306C321FFDEAEE00DBA6AD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
 		8F4BFFD51FE5813C00CDC499 /* NowPlayingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingView.xib; sourceTree = "<group>"; };
 		8F4BFFD91FE7A1D300CDC499 /* CustomTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		8F2D71C41FE3936500BF81EE /* Podcaster */ = {
 			isa = PBXGroup;
 			children = (
+				8F306C301FFDEA5B00DBA6AD /* Search */,
 				8F4B00241FECFB5900CDC499 /* Home */,
 				8F4B00221FECF98A00CDC499 /* Common */,
 				8F4BFFD71FE7A19E00CDC499 /* Tabbar */,
@@ -100,6 +103,7 @@
 				8F2D71C51FE3936500BF81EE /* AppDelegate.swift */,
 				8F2D71CB1FE3936500BF81EE /* Main.storyboard */,
 				8F2D71CE1FE3936500BF81EE /* Assets.xcassets */,
+				8F2D71D01FE3936500BF81EE /* LaunchScreen.storyboard */,
 				8F2D71D31FE3936500BF81EE /* Info.plist */,
 			);
 			path = Podcaster;
@@ -127,6 +131,22 @@
 			children = (
 				8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */,
 				8F4BFFD51FE5813C00CDC499 /* NowPlayingView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F306C301FFDEA5B00DBA6AD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8F306C311FFDEA6100DBA6AD /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8F306C311FFDEA6100DBA6AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F306C321FFDEAEE00DBA6AD /* SearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				8F4BFFD91FE7A1D300CDC499 /* CustomTabbarViewController.swift */,
-				8F2D71D01FE3936500BF81EE /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			path = view;
@@ -294,6 +313,7 @@
 				8F4BFFDA1FE7A1D300CDC499 /* CustomTabbarViewController.swift in Sources */,
 				8F5BC2801FE546ED008F936C /* PopupSlideTableView.swift in Sources */,
 				0FC635761FF288BC0072D7FC /* CategoryTableTypeTableViewCell.swift in Sources */,
+				8F306C331FFDEAEE00DBA6AD /* SearchViewController.swift in Sources */,
 				8F2D71C61FE3936500BF81EE /* AppDelegate.swift in Sources */,
 				8F4BFFD41FE5813000CDC499 /* NowPlayingView.swift in Sources */,
 				0FC635701FF279780072D7FC /* HomeTableViewController.swift in Sources */,

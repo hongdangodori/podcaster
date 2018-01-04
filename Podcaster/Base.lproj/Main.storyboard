@@ -286,7 +286,7 @@
         <!--Search-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="Search" id="8rJ-Kc-sve" sceneMemberID="viewController">
+                <viewController title="Search" id="8rJ-Kc-sve" customClass="SearchViewController" customModule="Podcaster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,12 +295,29 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zz-pd-dDP">
+                                <rect key="frame" x="377" y="77" width="30" height="30"/>
+                                <state key="normal" title="취소"/>
+                                <connections>
+                                    <action selector="didCancelButtonTapped:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Xjx-9C-6fT"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiL-Nd-GfM" userLabel="Dimmed View">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <color key="backgroundColor" red="0.63346684644670048" green="0.63346684644670048" blue="0.63346684644670048" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eN5-9C-ryu" firstAttribute="leading" secondItem="XsH-io-krZ" secondAttribute="leading" id="1Vu-3e-hLG"/>
+                            <constraint firstItem="PiL-Nd-GfM" firstAttribute="top" secondItem="eN5-9C-ryu" secondAttribute="bottom" id="52H-IW-lF7"/>
+                            <constraint firstItem="9Zz-pd-dDP" firstAttribute="centerY" secondItem="eN5-9C-ryu" secondAttribute="centerY" id="B2a-ua-7j3"/>
+                            <constraint firstItem="9Zz-pd-dDP" firstAttribute="leading" secondItem="eN5-9C-ryu" secondAttribute="trailing" constant="2" id="DpR-5Y-QT7"/>
+                            <constraint firstItem="PiL-Nd-GfM" firstAttribute="leading" secondItem="XsH-io-krZ" secondAttribute="leading" id="FdX-6H-WRp"/>
                             <constraint firstItem="XsH-io-krZ" firstAttribute="trailing" secondItem="eN5-9C-ryu" secondAttribute="trailing" id="Ir0-Bd-ngh"/>
+                            <constraint firstItem="XsH-io-krZ" firstAttribute="trailing" secondItem="PiL-Nd-GfM" secondAttribute="trailing" id="Z8Q-9k-s04"/>
                             <constraint firstItem="eN5-9C-ryu" firstAttribute="top" secondItem="XsH-io-krZ" secondAttribute="top" id="u5H-N3-aon"/>
+                            <constraint firstItem="XsH-io-krZ" firstAttribute="bottom" secondItem="PiL-Nd-GfM" secondAttribute="bottom" id="wXT-xb-GhS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XsH-io-krZ"/>
                     </view>
@@ -308,10 +325,25 @@
                     <navigationItem key="navigationItem" title="Search" id="nvM-ax-EX8">
                         <barButtonItem key="backBarButtonItem" title="&lt;" id="cCg-rY-iq1"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dimmedView" destination="PiL-Nd-GfM" id="MNf-CV-KgF"/>
+                        <outlet property="searchBar" destination="eN5-9C-ryu" id="jm8-E5-dUG"/>
+                        <outlet property="searchBarTrailingConstraint" destination="Ir0-Bd-ngh" id="SOQ-pl-TaJ"/>
+                        <outlet property="searchCancelButton" destination="9Zz-pd-dDP" id="CYt-4n-azA"/>
+                        <outlet property="searchDisplayController" destination="pzZ-Ov-6Yr" id="zmq-r4-ym3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="pzZ-Ov-6Yr">
+                    <connections>
+                        <outlet property="delegate" destination="8rJ-Kc-sve" id="Bff-GA-cY2"/>
+                        <outlet property="searchContentsController" destination="8rJ-Kc-sve" id="1kc-p8-aFL"/>
+                        <outlet property="searchResultsDataSource" destination="8rJ-Kc-sve" id="VdF-nr-hVW"/>
+                        <outlet property="searchResultsDelegate" destination="8rJ-Kc-sve" id="gne-RT-Lua"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1630" y="233"/>
+            <point key="canvasLocation" x="1629.5999999999999" y="232.53373313343329"/>
         </scene>
         <!--Custom Tabbar View Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -400,6 +432,6 @@
         <image name="subscriptionTabIcon" width="43" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4K2-cP-Yzc"/>
+        <segue reference="RfM-DW-8R2"/>
     </inferredMetricsTieBreakers>
 </document>
