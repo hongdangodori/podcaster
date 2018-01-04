@@ -13,6 +13,7 @@ class NowPlayingView: UIView {
     @IBOutlet var containerView: UIView!
     var didCloseButtonTouched: (() -> Void)?
     
+    @IBOutlet weak var podImageView: UIImageView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -29,16 +30,12 @@ class NowPlayingView: UIView {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(containerView)
         
-        addConstraint(NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1.0, constant: -3))
-        addConstraint(NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1.0, constant: 3))
-        addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 3))
-        addConstraint(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .bottom, multiplier: 1.0, constant: 3))
-        containerView.layer.shadowColor = UIColor.black.cgColor
-        containerView.layer.borderColor = UIColor.lightGray.cgColor
-        containerView.layer.borderWidth = 1.0
-        containerView.layer.shadowOpacity = 0.8
-        containerView.layer.shadowRadius = 3.0
-        containerView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        addConstraint(NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1.0, constant: 0))
+        addConstraint(NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1.0, constant: 0))
+        addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 0))
+        addConstraint(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .bottom, multiplier: 1.0, constant: 0))
+        podImageView.layer.borderColor = UIColor.white.cgColor
+        containerView.layer.borderWidth = 0.4
     }
     
     @IBAction func didCloseButtonTouched(_ sender: Any) {

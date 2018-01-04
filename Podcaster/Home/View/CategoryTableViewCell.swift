@@ -11,6 +11,7 @@ import UIKit
 class CategoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate = self

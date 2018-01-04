@@ -10,4 +10,12 @@ import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var mainTitleLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        mainTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        mainTitleLabel.sizeToFit()
+        // Initialization code
+    }
 }

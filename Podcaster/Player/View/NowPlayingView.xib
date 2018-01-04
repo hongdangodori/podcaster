@@ -14,6 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NowPlayingView" customModule="Podcaster" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="iN0-l3-epB" id="zL4-pR-h3N"/>
+                <outlet property="podImageView" destination="WcB-Vp-iCG" id="lR0-th-fY1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,8 +28,8 @@
                         <constraint firstAttribute="width" secondItem="FhT-Vz-dDn" secondAttribute="height" multiplier="1:1" id="PCk-Jx-Dlb"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
-                    <state key="normal" image="playIcon"/>
-                    <state key="highlighted" image="playIconDark" backgroundImage="ic_channeldetail_subscribed_bg.9"/>
+                    <state key="normal" image="playIconDark"/>
+                    <state key="highlighted" image="playIcon" backgroundImage="ic_channeldetail_subscribed_bg.9"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URZ-kb-w0P" userLabel="Close Button">
                     <rect key="frame" x="313" y="0.0" width="50" height="50"/>
@@ -36,8 +37,8 @@
                         <constraint firstAttribute="width" secondItem="URZ-kb-w0P" secondAttribute="height" multiplier="1:1" id="xMS-C6-D8d"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                    <state key="normal" image="close"/>
-                    <state key="highlighted" image="close_white" backgroundImage="ic_channeldetail_subscribed_bg.9"/>
+                    <state key="normal" image="close_white"/>
+                    <state key="highlighted" image="close" backgroundImage="ic_channeldetail_subscribed_bg.9"/>
                     <connections>
                         <action selector="didCloseButtonTouched:" destination="-1" eventType="touchUpInside" id="QUj-DN-QKR"/>
                     </connections>
@@ -48,14 +49,14 @@
                         <constraint firstAttribute="width" secondItem="WcB-Vp-iCG" secondAttribute="height" multiplier="1:1" id="QEH-Kd-hR2"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test pod" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRj-L1-tsB" userLabel="Pod Title Label">
-                    <rect key="frame" x="58" y="5.5" width="196" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[MP 3] IU - 스물 셋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRj-L1-tsB" userLabel="Pod Title Label">
+                    <rect key="frame" x="58" y="7" width="196" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.27466221690783044" green="0.27190401820857363" blue="0.26542003598216229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WcB-Vp-iCG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2tm-8W-e0f"/>
                 <constraint firstItem="RRj-L1-tsB" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-10" id="3Bu-8W-Df9"/>

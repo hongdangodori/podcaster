@@ -18,6 +18,7 @@
 		8F2D71DD1FE3936600BF81EE /* PodcasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D71DC1FE3936600BF81EE /* PodcasterTests.swift */; };
 		8F2D71EC1FE399D600BF81EE /* PopupSlideTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2D71EA1FE399D600BF81EE /* PopupSlideTableView.xib */; };
 		8F306C331FFDEAEE00DBA6AD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F306C321FFDEAEE00DBA6AD /* SearchViewController.swift */; };
+		8F306C351FFE13B200DBA6AD /* CategoryLinearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F306C341FFE13B200DBA6AD /* CategoryLinearTableViewCell.swift */; };
 		8F4BFFD41FE5813000CDC499 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */; };
 		8F4BFFD61FE5813C00CDC499 /* NowPlayingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD51FE5813C00CDC499 /* NowPlayingView.xib */; };
 		8F4BFFDA1FE7A1D300CDC499 /* CustomTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4BFFD91FE7A1D300CDC499 /* CustomTabbarViewController.swift */; };
@@ -50,6 +51,7 @@
 		8F2D71DE1FE3936600BF81EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F2D71EA1FE399D600BF81EE /* PopupSlideTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupSlideTableView.xib; sourceTree = "<group>"; };
 		8F306C321FFDEAEE00DBA6AD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8F306C341FFE13B200DBA6AD /* CategoryLinearTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLinearTableViewCell.swift; sourceTree = "<group>"; };
 		8F4BFFD31FE5813000CDC499 /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
 		8F4BFFD51FE5813C00CDC499 /* NowPlayingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingView.xib; sourceTree = "<group>"; };
 		8F4BFFD91FE7A1D300CDC499 /* CustomTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				0FC635711FF27B8E0072D7FC /* CategoryTableViewCell.swift */,
 				0FC635731FF27E1D0072D7FC /* CategoryCollectionViewCell.swift */,
 				0FC635751FF288BC0072D7FC /* CategoryTableTypeTableViewCell.swift */,
+				8F306C341FFE13B200DBA6AD /* CategoryLinearTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F306C351FFE13B200DBA6AD /* CategoryLinearTableViewCell.swift in Sources */,
 				8F4BFFDA1FE7A1D300CDC499 /* CustomTabbarViewController.swift in Sources */,
 				8F5BC2801FE546ED008F936C /* PopupSlideTableView.swift in Sources */,
 				0FC635761FF288BC0072D7FC /* CategoryTableTypeTableViewCell.swift in Sources */,

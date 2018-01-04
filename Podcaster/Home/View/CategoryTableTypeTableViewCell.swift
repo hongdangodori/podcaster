@@ -12,10 +12,12 @@ class CategoryTableTypeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tableView: UITableView!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         tableView.delegate = self
         tableView.dataSource = self
+        
         // Initialization code
     }
 
