@@ -350,7 +350,9 @@ extension PopupSlideTableView: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell()
+        cell.backgroundColor = .orange
+        return cell
     }
 }
 
@@ -358,17 +360,21 @@ extension PopupSlideTableView: UITableViewDataSource {
 extension PopupSlideTableView: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollOffset = scrollView.contentOffset.y
-        if scrollOffset == 0 {
+        if scrollOffset == 0 && translationYWhenContentsOffSetZero == 0 {
             translationYWhenContentsOffSetZero = scrollView.panGestureRecognizer.translation(in: self).y
             print(translationYWhenContentsOffSetZero)
         }
         
         if scrollOffset < 0 || isPanning {
+            scrollView.contentOffset.y = 0
             onPan(scrollView.panGestureRecognizer)
         }
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        onPan(scrollView.panGestureRecognizer)
+        let scrollOffset = scrollView.contentOffset.y
+        if scrollOffset <= 0 || isPanning {
+            onPan(scrollView.panGestureRecognizer)
+        }
     }
 }
