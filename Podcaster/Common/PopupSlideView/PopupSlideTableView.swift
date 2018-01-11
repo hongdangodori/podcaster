@@ -45,6 +45,7 @@ class PopupSlideTableView: UIView {
     
     private var isPoppedUp: Bool = false
     private var isFull: Bool = false
+    private var translationYWhenContentsOffSetZero: CGFloat = 0
     
     public var isFullPageEnabled: Bool = true
     
@@ -175,17 +176,20 @@ class PopupSlideTableView: UIView {
         deemedView.isHidden = false
         didPopClosure?(true)
         if animated {
-            UIView.animate(withDuration: animationDuration) {
+            UIView.animate(withDuration: animationDuration, animations: {
                 self.slideViewVerticallyTo(self.topInsets + self.topPadding)
                 self.miniSummaryBarView.alpha = 0.0
                 self.deemedView.alpha = 0.7
                 self.progressPopClosure?(0)
+            }) { _ in
+                self.translationYWhenContentsOffSetZero = 0
             }
         } else {
             slideViewVerticallyTo(topInsets + topPadding)
             miniSummaryBarView.alpha = 0.0
             deemedView.alpha = 0.7
             progressPopClosure?(0)
+            translationYWhenContentsOffSetZero = 0
         }
         isPoppedUp = true
         isFull = false
@@ -195,11 +199,14 @@ class PopupSlideTableView: UIView {
         didPopClosure?(true)
         progressPopClosure?(0)
         if animated {
-            UIView.animate(withDuration: animationDuration) {
+            UIView.animate(withDuration: animationDuration, animations: {
                 self.slideViewVerticallyTo(self.topInsets)
+            }) { _ in
+                self.translationYWhenContentsOffSetZero = 0
             }
         } else {
             slideViewVerticallyTo(topInsets)
+            translationYWhenContentsOffSetZero = 0
         }
         isPoppedUp = true
         isFull = true
@@ -215,6 +222,7 @@ class PopupSlideTableView: UIView {
             }) { _ in
                 self.deemedView.isHidden = true
                 self.didPopClosure?(false)
+                self.translationYWhenContentsOffSetZero = 0
             }
         } else {
             miniSummaryBarView.alpha = 1.0
@@ -223,6 +231,7 @@ class PopupSlideTableView: UIView {
             deemedView.isHidden = true
             didPopClosure?(false)
             progressPopClosure?(100)
+            translationYWhenContentsOffSetZero = 0
         }
 
         isPoppedUp = false
@@ -231,6 +240,7 @@ class PopupSlideTableView: UIView {
     @objc func onPan(_ panGesture: UIPanGestureRecognizer) {
         let viewHeight = frame.size.height
         let translation = panGesture.translation(in: self)        
+        let translationY = translation.y - translationYWhenContentsOffSetZero
         
         switch panGesture.state {
         case .began, .changed:
@@ -241,21 +251,21 @@ class PopupSlideTableView: UIView {
                 topMax -= topPadding
             }
             
-            let y = isPoppedUp ? max(topMax, translation.y) : min(0, translation.y)
+            let y = isPoppedUp ? max(topMax, translationY) : min(0, translationY)
             
-            if !isPoppedUp && (translation.y > 0 || viewHeight - miniSummaryBarHeight + y < topInsets + topPadding ) {
+            if !isPoppedUp && (translationY > 0 || viewHeight - miniSummaryBarHeight + y < topInsets + topPadding ) {
                 break
             }
             
             if isFull {
-                slideViewVerticallyTo(y - miniSummaryBarHeight)
+                slideViewVerticallyTo(y - miniSummaryBarHeight + statusBarHeight)
             } else if isPoppedUp {
                 if y > 0 {
                     deemedView.alpha = 0.7 * (viewHeight - topPadding - y) / (viewHeight - topPadding)
                     miniSummaryBarView.alpha = y / (viewHeight - topPadding)
                     progressPopClosure?(100 * (1 - (viewHeight - topPadding - y) / (viewHeight - topPadding)))
                 }
-                slideViewVerticallyTo(y + topPadding - miniSummaryBarHeight)
+                slideViewVerticallyTo(y + topPadding - miniSummaryBarHeight + statusBarHeight)
             } else {
                 didPopClosure?(true)
                 deemedView.alpha = 0.7 *  -y / (viewHeight - topPadding)
@@ -267,14 +277,14 @@ class PopupSlideTableView: UIView {
         case .ended:
             isPanning = false
             let velocity = panGesture.velocity(in: self)
-            let pop = (isPoppedUp ? translation.y > viewHeight * minimumScreenRatioToHide : translation.y < -viewHeight * minimumScreenRatioToHide ) ||
-                (velocity.y > minimumVelocityToHide) || (fullPageEnabled && (isFull ? translation.y > -topInsets : translation.y < topInsets))
+            let pop = (isPoppedUp ? translationY > viewHeight * minimumScreenRatioToHide : translationY < -viewHeight * minimumScreenRatioToHide ) ||
+                (velocity.y > minimumVelocityToHide) || (fullPageEnabled && (isFull ? translationY > -topInsets : translationY < topInsets))
             if pop {
                 if isFull {
                     popUpPlayerView(animated: true)
                 } else {
                     if isPoppedUp {
-                        if translation.y < topInsets {
+                        if translationY < topInsets {
                             popUpToFullPlayerView(animated: true)
                         } else {
                             popDownPlayerView(animated: true)
@@ -292,6 +302,8 @@ class PopupSlideTableView: UIView {
                     popDownPlayerView(animated: true)
                 }
             }
+            translationYWhenContentsOffSetZero = 0
+            print("to Zero")
             break
         default:
             isPanning = false
@@ -334,7 +346,7 @@ extension PopupSlideTableView {
 
 extension PopupSlideTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 100
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -346,9 +358,12 @@ extension PopupSlideTableView: UITableViewDataSource {
 extension PopupSlideTableView: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollOffset = scrollView.contentOffset.y
+        if scrollOffset == 0 {
+            translationYWhenContentsOffSetZero = scrollView.panGestureRecognizer.translation(in: self).y
+            print(translationYWhenContentsOffSetZero)
+        }
         
         if scrollOffset < 0 || isPanning {
-            scrollView.contentOffset.y = 0
             onPan(scrollView.panGestureRecognizer)
         }
     }
